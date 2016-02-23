@@ -1,9 +1,10 @@
 {{yield}}
 
 <div class="col-xs-12">
+  {{story.author}}
   <div class="well">
     <div class="image">
-      <h2>{{story.title}}<br />{{story.author}}</h2>
+      <h2>{{story.title}}<br /></h2>
       {{#link-to 'story-page' story.id}}<img src="{{story.image_url}}" alt="" height="100%" width="100%" />{{/link-to}}
     </div>
   </div>

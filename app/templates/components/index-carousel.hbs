@@ -4,10 +4,9 @@
   <div class="col-xs-8 col-xs-offset-2">
       <div class="row">
         {{#slick-slider autoplay=true arrows=true}}
-        <div class="box"> <img src="http://lovelace-media.imgix.net/uploads/8/d1ca7250-a69f-0133-a053-0e7c926a42af.jpg?w=766&h=431&fit=crop&crop=faces&auto=format&q=70"> </div>
-        <div class="box"> <img src="http://lovelace-media.imgix.net/uploads/8/d1ca7250-a69f-0133-a053-0e7c926a42af.jpg?w=766&h=431&fit=crop&crop=faces&auto=format&q=70"> </div>
-        <div class="box"> <img src="http://lovelace-media.imgix.net/uploads/8/d1ca7250-a69f-0133-a053-0e7c926a42af.jpg?w=766&h=431&fit=crop&crop=faces&auto=format&q=70"> </div>
-        <div class="box"> <img src="http://lovelace-media.imgix.net/uploads/8/d1ca7250-a69f-0133-a053-0e7c926a42af.jpg?w=766&h=431&fit=crop&crop=faces&auto=format&q=70"> </div>
+        {{#each headlines as |story|}}
+          <div class="box"> <div class= 'myH2'>{{story.title}}</div>{{#link-to 'headline-page' story.id}} <img src="{{story.image_url}}"> {{/link-to}}</div>
+        {{/each}}
         {{/slick-slider}}
       </div>
   </div>

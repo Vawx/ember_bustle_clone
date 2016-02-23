@@ -1,9 +1,9 @@
 {{outlet}}
 
-{{index-carousel}}
+{{index-carousel headlines=model.headlines}}
 
 <div class="container">
-    {{#each model as |story|}}
+    {{#each model.stories as |story|}}
     <div class="col-xs-4">
       {{index-news-stories story=story}}
     </div>

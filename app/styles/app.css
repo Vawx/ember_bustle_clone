@@ -3,9 +3,25 @@
    width: 100%; /* for IE 6 */
 }
 
+.box {
+   position: relative;
+   width: 100%; /* for IE 6 */
+}
+
+.myH2 {
+  position:absolute;
+  top: 12.25em;
+  left: 0.25em;
+  width: 40%;
+  height: 30%;
+  color: white;
+  background-color: rgba( 120, 120, 120, 0.65);
+  font-size: 24px;
+}
+
 h2 {
    position:absolute;
-   top: 5.25em;
+   top: 7.25em;
    left: 0.25em;
    width: 80%;
    color: white;
