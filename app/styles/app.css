@@ -1,0 +1,30 @@
+.image {
+   position: relative;
+   width: 100%; /* for IE 6 */
+}
+
+h2 {
+   position:absolute;
+   top: 5.25em;
+   left: 0.25em;
+   width: 80%;
+   color: white;
+   background-color: rgba( 120, 120, 120, 0.65);
+   font-size: 18px;
+}
+
+body {
+  background-color: rgb(220,220,220);
+}
+
+.navbar-brand {
+    color: black !important;
+}
+
+.navbar li a {
+  color: black !important;
+}
+
+.navbar {
+    background-color: rgb(200,200,200);
+}
