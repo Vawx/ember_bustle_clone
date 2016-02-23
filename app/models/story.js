@@ -6,5 +6,4 @@ export default DS.Model.extend({
   post_date: DS.attr( ),
   image_url: DS.attr( ),
   title: DS.attr( ),
-  headline: DS.attr( ),
 });

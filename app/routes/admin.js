@@ -9,12 +9,6 @@ export default Ember.Route.extend({
   },
   actions: {
     save( params ) {
-      console.log( params.author );
-      console.log( params.content );
-      console.log( params.image_url );
-      console.log( params.post_date );
-      console.log( params.title );
-
       var storyParams = {
         author: params.author,
         content: params.content,
@@ -40,5 +34,5 @@ export default Ember.Route.extend({
       headline.destroyRecord( );
       this.transitionTo('admin');
     },
-  }
+  },
 });

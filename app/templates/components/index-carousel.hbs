@@ -4,9 +4,9 @@
   <div class="col-xs-8 col-xs-offset-2">
       <div class="row">
         {{#slick-slider autoplay=true arrows=true}}
-        {{#each headlines as |story|}}
-          <div class="box"> <div class= 'myH2'>{{story.title}}</div>{{#link-to 'headline-page' story.id}} <img src="{{story.image_url}}"> {{/link-to}}</div>
-        {{/each}}
+          {{#each headlines as |story|}}
+            <div class="box"> <div class= 'myH2'>{{story.title}}</div>{{#link-to 'headline-page' story.id}} <img src="{{story.image_url}}"> {{/link-to}}</div>
+          {{/each}}
         {{/slick-slider}}
       </div>
   </div>
