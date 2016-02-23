@@ -1,4 +1,11 @@
 {{outlet}}
 
 {{index-carousel}}
-{{index-news-stories stories=stories}}
+
+<div class="container">
+    {{#each model as |story|}}
+    <div class="col-xs-6">
+      {{index-news-stories story=story}}
+    </div>
+    {{/each}}
+</div>
