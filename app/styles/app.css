@@ -44,3 +44,7 @@ body {
 .navbar {
     background-color: rgb(200,200,200);
 }
+
+span.wrap {
+    word-wrap: break-word;
+}
