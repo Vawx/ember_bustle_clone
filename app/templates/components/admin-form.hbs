@@ -41,7 +41,14 @@
             {{input checked=headline type="checkbox" id="headline"}}
           </div>
           <div class="form-group">
-            <button class="btn btn-primary" {{action 'save'}}>Submit</button>
+            {{#if showSubmit}}
+              <button class="btn btn-primary" {{action 'save'}}>Submit</button>
+            {{/if}}
+          </div>
+          <div class="form-group">
+            {{#if showSave}}
+              <button type="button" class="btn btn-info" id="saveButton" name="button"{{action 'updateSave'}}>Save</button>
+            {{/if}}
           </div>
         </form>
       </div>
@@ -56,7 +63,7 @@
             </div>
             <div class="container">
               <a href="#" {{action 'destroyStory' story}}>Delete</a>
-              <a href="#" {{action 'edit' story}}>Edit</a>
+              <a href="#" {{action 'editStory' story}}>Edit</a>
             </div>
           {{/each}}
           <label for="">Headline</label>
@@ -66,7 +73,7 @@
             </div>
             <div class="container">
               <a href="#" {{action 'destroyHeadline' headline}}>Delete</a>
-              <a href="#" {{action 'edit' headline}}>Edit</a>
+              <a href="#" {{action 'editHeadline' headline}}>Edit</a>
             </div>
           {{/each}}
         </div>

@@ -26,6 +26,29 @@ export default Ember.Route.extend({
       }
       this.transitionTo('index');
     },
+    updateSave( params, id ) {
+      if( params.headline ) {
+        this.store.findRecord('headline', id).then(function( story ) {
+          story.set('author', params.author);
+          story.set('content', params.content);
+          story.set('post_date', params.post_date);
+          story.set('image_url', params.image_url);
+          story.set('title', params.title);
+          story.save( );
+        });
+      }
+      else {
+        this.store.findRecord('story', id).then(function( story ) {
+          story.set('author', params.author);
+          story.set('content', params.content);
+          story.set('post_date', params.post_date);
+          story.set('image_url', params.image_url);
+          story.set('title', params.title);
+          story.save( );
+        });
+      }
+      this.transitionTo('admin');
+    },
     destroyStory( story ) {
       story.destroyRecord( );
       this.transitionTo('admin');
